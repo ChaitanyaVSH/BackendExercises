@@ -31,6 +31,18 @@ const getEvents = async () => {
     // const { results } = await notion.databases.query({database_id: database_id});
     const { results } = await notion.request(payload);
 
-    console.log("Results: ", results)
+    const events = results.map((page) => {
+        return {
+            id: page.id,
+            name: page.properties.Name.title[0].plain_text,
+            tags: [...page.properties.Tags.multi_select]
+        }
+    })
+
+    return events;
 }
-getEvents();
+
+(async () => {
+    const events = await getEvents();
+    console.log("Events: ", events);
+})();
