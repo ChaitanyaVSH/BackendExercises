@@ -1,3 +1,15 @@
+const express = require("express");
+const getEvents = require("./services/getEvents");
+const PORT = process.env.PORT || 5000;
+
+const app = express();
+
+app.listen(PORT, () => {
+    console.log(`Application is up and running at ${PORT}`);
+})
+
+
+
 
 // Sample snippets
 /**
@@ -9,9 +21,9 @@
  */
 
 // Importing getEvents from the services.
-const getEvents = require("./services/getEvents");
+// const getEvents = require("./services/getEvents");
 
-(async () => {
-    const events = await getEvents();
-    console.log("Events: ", events);
-})();
+// (async () => {
+//     const events = await getEvents();
+//     console.log("Events: ", events);
+// })();
