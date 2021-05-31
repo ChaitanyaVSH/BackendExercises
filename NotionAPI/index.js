@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 // This will hold the FE pages
+/**
+ * * https://expressjs.com/en/starter/static-files.html
+ */
 app.use(express.static("public"));
 
 
