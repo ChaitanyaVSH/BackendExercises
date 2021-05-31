@@ -4,6 +4,9 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
+// This will hold the FE pages
+app.use(express.static("public"));
+
 
 app.get("/events", async (request, response) => {
     const events = await getEvents();
