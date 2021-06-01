@@ -24,6 +24,7 @@ const addEventsToDom = async () => {
 
         div.innerHTML = `
         <h2>${event.name}</h2>
+        <span class="tags">${event.tags}</span>
         `
 
         eventsEl.appendChild(div);

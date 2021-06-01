@@ -37,4 +37,13 @@
   margin: 10px;
   padding: 25px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tags {
+  border: 1px solid lightcoral;
+  padding: 5px 10px;
+  margin-top: auto;
+  width: fit-content;
 }
