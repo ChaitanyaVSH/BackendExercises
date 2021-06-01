@@ -18,7 +18,7 @@ module.exports =  async function getEvents() {
         return {
             id: page.id,
             name: page.properties.Name.title[0].plain_text,
-            tags: [...page.properties.Tags.multi_select]
+            tags: page.properties.Tags.rich_text[0].text.content
         }
     })
 
