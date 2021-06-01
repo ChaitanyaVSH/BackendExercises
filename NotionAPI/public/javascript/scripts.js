@@ -18,11 +18,13 @@ const addEventsToDom = async () => {
         loadingEl.innerHTML = "";
     }
 
-    events.map((event, idx) => {
+    events.map(event => {
         let div = document.createElement("div");
         div.classList.add("event");
 
-        div.innerHTML = `<h2>${event.name}</h2>`
+        div.innerHTML = `
+        <h2>${event.name}</h2>
+        `
 
         eventsEl.appendChild(div);
     })
