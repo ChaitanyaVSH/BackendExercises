@@ -18,7 +18,14 @@ const getEventsFromBackend = async () => {
 const addEventsToDom = async () => {
     const events = await getEventsFromBackend();
 
-    console.log("Events: ", events);
+    events.map((event, idx) => {
+        let div = document.createElement("div");
+        div.classList.add("event");
+
+        div.innerHTML = `<h2>${event.name}</h2>`
+
+        eventsEl.appendChild(div);
+    })
 }
 
 addEventsToDom();
