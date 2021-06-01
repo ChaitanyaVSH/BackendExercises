@@ -4,7 +4,7 @@ const loadingEl = document.getElementById("loader");
 let loading = true;
 
 const getEventsFromBackend = async () => {
-    const response = await fetch("http://localhost:5000/events");
+    const response = await fetch("/events");
     const events = await response.json();
 
     loading = false;
