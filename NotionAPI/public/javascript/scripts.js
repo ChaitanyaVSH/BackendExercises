@@ -4,6 +4,7 @@ const loadingEl = document.getElementById("loader");
 let loading = true;
 
 const getEventsFromBackend = async () => {
+    console.log("Hitting the end point...");
     const response = await fetch("/events");
     const events = await response.json();
 
