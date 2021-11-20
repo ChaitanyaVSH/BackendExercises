@@ -15,6 +15,13 @@ app.get("/opinions", async (request, response) => {
   response.json(opinions);
 });
 
+/**
+ * Handler for Base directory
+ */
+app.get("/", async (request, response) => {
+  response.send("Hello");
+});
+
 app.listen(PORT, () => {
   console.log("App is up and running..." + PORT);
 });
