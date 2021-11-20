@@ -5,7 +5,7 @@ const supabase = require("../supabaseClient");
 const fetchOpinions = async () => {
   let { data: opinions, error } = await supabase.from("opinions").select("*");
 
-  return error ? error : opinions;
+  return await (error ? error : opinions);
 };
 
 module.exports = fetchOpinions;
