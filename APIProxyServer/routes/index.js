@@ -35,7 +35,7 @@ router.get("/", async (request, response) => {
 
     response.status(200).json(data);
   } catch (error) {
-    response.status(500).json({ error });
+    response.status(500).json(error);
   }
 });
 
