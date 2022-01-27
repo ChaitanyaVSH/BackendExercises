@@ -1,4 +1,5 @@
 // Imports
+const apicache = require("apicache");
 const cors = require("cors");
 const express = require("express");
 const expressRateLimiter = require("express-rate-limit");
@@ -16,6 +17,11 @@ const rateLimiter = expressRateLimiter({
   max: 5, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
 });
 app.use(rateLimiter);
+
+// Initialize caches
+let cache = apicache.middleware;
+// Enable cache
+app.use(cache("1 minutes"));
 
 // Routes
 app.use("/api", require("./routes"));
