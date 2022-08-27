@@ -25,8 +25,6 @@ app.listen(PORT, () => {
 })
 
 
-
-console.log("End points: ", app._router.stack);
 // Sample snippets
 /**
  * * Listing all the databases linked to the integrations
